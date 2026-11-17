@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-emerald: #10B981;
+  --color-brand-emerald-dark: #059669;
+  --color-brand-emerald-deep: #047857;
+  --color-brand-coral: #F97316;
+  --color-brand-coral-dark: #EA580C;
+  --color-brand-charcoal: #111827;
+  --color-brand-ivory: #FAFAF5;
+  --color-brand-slate: #1F2937;
+  --color-brand-slate-muted: #64748B;
+  --color-brand-mint: #34D399;
+  --color-brand-rose: #F43F5E;
+  --color-brand-amber: #FBBF24;
+  --color-brand-violet: #A78BFA;
+  --color-brand-text-primary: #0F172A;
+  --color-brand-text-secondary: #64748B;
+
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-ivory);
+  color: var(--color-brand-text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark body {
+  background-color: var(--color-brand-charcoal);
+  color: #F8FAFC;
+}
